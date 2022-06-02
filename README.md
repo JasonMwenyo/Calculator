@@ -15,8 +15,6 @@ mobile device to better understand basic functionality and edge cases. <br><br>
 
 ## User Stories
 
-<hr>
-
 - [ ] User can see a display showing the current number entered or the
       result of the last operation.
 - [ ] User can see an entry pad containing buttons for the digits 0-9,
@@ -38,16 +36,12 @@ mobile device to better understand basic functionality and edge cases. <br><br>
 
 ## Developer Stories
 
-<hr>
-
 - [ ] User can click the 'AC' button to clear all internal work areas and
       to set the display to 0.
 - [ ] User can see 'ERR' displayed if any operation would exceed the
       8 digit maximum. <br><br>
 
 ## Bonus features
-
-<hr>
 
 - [ ] User can click a '+/-' button to change the sign of the number that is
       currently displayed.
