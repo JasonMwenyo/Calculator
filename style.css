@@ -17,4 +17,35 @@
   border: 1px solid black;
   height: 50px;
   text-align: right;
+  margin-bottom: 10px;
+}
+
+.first-row {
+  display: flex;
+}
+
+.second-row {
+  display: flex;
+}
+
+.third-row {
+  display: flex;
+}
+
+.fourth-row {
+  display: flex;
+}
+
+.fifth-row {
+  display: flex;
+}
+
+.first-row div {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 70px;
+  text-align: center;
+  font-size: small;
+  /* border-radius: 50%; */
 }
