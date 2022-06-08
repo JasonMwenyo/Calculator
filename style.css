@@ -7,7 +7,7 @@
 .calculator {
   padding: 20px;
   border: 1px solid black;
-  width: 30%;
+  width: 300px;
   margin: 10% auto;
 }
 
@@ -40,16 +40,41 @@
   display: flex;
 }
 
-.first-row div,
-.second-row div,
-.third-row div,
-.fourth-row div {
+.first-row button,
+.second-row button,
+.third-row button,
+.fourth-row button {
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
   height: 45px;
   width: 90%;
   text-align: center;
-  font-size: small;
+  font-size: large;
   border-radius: 100%;
+  cursor: pointer;
+}
+
+.zero-button {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  height: 45px;
+  width: 105px;
+  text-align: center;
+  font-size: large;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.last-buttons {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  height: 45px;
+  width: 48px;
+  text-align: center;
+  font-size: large;
+  border-radius: 100%;
+  cursor: pointer;
 }
