@@ -9,15 +9,20 @@
   border: 1px solid black;
   width: 300px;
   margin: 10% auto;
+  box-shadow: 0 0 10px 0 #ff9501;
+  background-color: black;
 }
 
-.input {
+.display {
   padding-top: 15px;
   padding-right: 15px;
   border: 1px solid black;
   height: 50px;
   text-align: right;
   margin-bottom: 10px;
+  color: #f8f8f8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .first-row {
@@ -65,6 +70,8 @@
   font-size: large;
   border-radius: 25px;
   cursor: pointer;
+  color: #f8f8f8;
+  background-color: #333333;
 }
 
 .last-buttons {
@@ -77,4 +84,20 @@
   font-size: large;
   border-radius: 100%;
   cursor: pointer;
+  background-color: #333333;
+}
+
+.yellow {
+  background-color: #fb9a0d;
+  color: #f8f8f8;
+}
+
+.light-grey {
+  background-color: #a7a7a7;
+  /* color: ; */
+}
+
+.dark-grey {
+  background-color: #333333;
+  color: #f8f8f8;
 }
