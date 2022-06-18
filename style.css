@@ -85,6 +85,7 @@
   border-radius: 100%;
   cursor: pointer;
   background-color: #333333;
+  color: #f8f8f8;
 }
 
 .yellow {
@@ -92,12 +93,21 @@
   color: #f8f8f8;
 }
 
-.light-grey {
-  background-color: #a7a7a7;
-  /* color: ; */
-}
-
 .dark-grey {
   background-color: #333333;
   color: #f8f8f8;
+}
+
+.dark-grey:hover,
+.light-grey:hover,
+.zero-button:hover,
+.last-buttons:hover,
+.yellow:hover {
+  filter: brightness(60%);
+}
+
+button:active {
+  background-color: #d0d9d0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
