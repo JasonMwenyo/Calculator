@@ -4,8 +4,8 @@ let signChanger = document.querySelector("#signChanger");
 let addToDisplay = 0;
 let firstNumber = 0;
 let secondNumber = 0;
-let operator = "";
-signChanger = '-';
+
+let negative = '-';
 
 
 const number0 = document.querySelector("#number0");
@@ -32,6 +32,8 @@ number0.addEventListener('click', () => {
     addToDisplay = number0.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 
@@ -40,54 +42,73 @@ number1.addEventListener('click', () => {
     addToDisplay = number1.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number2.addEventListener('click', () => {
     addToDisplay = number2.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number3.addEventListener('click', () => {
     addToDisplay = number3.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number4.addEventListener('click', () => {
     addToDisplay = number4.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number5.addEventListener('click', () => {
     addToDisplay = number5.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number6.addEventListener('click', () => {
     addToDisplay = number6.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number7.addEventListener('click', () => {
     addToDisplay = number7.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number8.addEventListener('click', () => {
     addToDisplay = number8.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 number9.addEventListener('click', () => {
     addToDisplay = number9.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
+
 });
 
 
@@ -95,20 +116,24 @@ number9.addEventListener('click', () => {
     addToDisplay = number9.value;
     display.textContent = display.textContent.concat(addToDisplay);
     firstNumber = display.textContent;
+    console.log(firstNumber);
+    return firstNumber;
 });
 
 
 // On -/+ click, add or remove sign infront
-signChanger.addEventListener('click', (firstNumber) => {
+signChanger.addEventListener('click', () => {
     firstNumber = parseInt(firstNumber);
+
+    if (firstNumber > 0) {
+        firstNumber = firstNumber * -1;
+        display.textContent = firstNumber;
+    } else {
+
+        if (firstNumber < 0) {
+            firstNumber = Math.abs(firstNumber);
+            display.textContent = firstNumber;
+        }
+    }
     console.log(firstNumber);
-
-    // firstNumber = -Math.abs(firstNumber);
-    // console.log(firstNumber);
 });
-
-// function pos_to_neg(num) {
-//     return -Math.abs(num);
-// }
-
-// console.log(pos_to_neg(15));
