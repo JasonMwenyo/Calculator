@@ -1,12 +1,12 @@
 let display = document.querySelector(".display");
 const ac = document.querySelector("#allClear");
 let signChanger = document.querySelector("#signChanger");
+let quotient = document.querySelector("#quotient");
 let addToDisplay = 0;
 let firstNumber = 0;
 let secondNumber = 0;
-
 let negative = '-';
-
+let division = document.querySelector("#division");
 
 const number0 = document.querySelector("#number0");
 const number1 = document.querySelector("#number1");
@@ -35,8 +35,6 @@ number0.addEventListener('click', () => {
     console.log(firstNumber);
     return firstNumber;
 });
-
-
 
 number1.addEventListener('click', () => {
     addToDisplay = number1.value;
@@ -112,15 +110,6 @@ number9.addEventListener('click', () => {
 });
 
 
-number9.addEventListener('click', () => {
-    addToDisplay = number9.value;
-    display.textContent = display.textContent.concat(addToDisplay);
-    firstNumber = display.textContent;
-    console.log(firstNumber);
-    return firstNumber;
-});
-
-
 // On -/+ click, add or remove sign infront
 signChanger.addEventListener('click', () => {
     firstNumber = parseInt(firstNumber);
@@ -128,12 +117,31 @@ signChanger.addEventListener('click', () => {
     if (firstNumber > 0) {
         firstNumber = firstNumber * -1;
         display.textContent = firstNumber;
+        return display.textContent;
+
     } else {
 
         if (firstNumber < 0) {
             firstNumber = Math.abs(firstNumber);
             display.textContent = firstNumber;
+            return display.textContent;
         }
     }
     console.log(firstNumber);
 });
+
+// Convert display to percentage
+quotient.addEventListener("click", () => {
+    display.textContent = display.textContent / 100;
+    console.log(display.textContent);
+});
+
+
+switch (key) {
+    case value:
+
+        break;
+
+    default:
+        break;
+}
