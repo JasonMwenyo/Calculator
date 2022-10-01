@@ -36,6 +36,7 @@ ac.addEventListener('click', () => {
 number0.addEventListener('click', (e) => {
     if (firstNumber.length >= 8) {
         e.preventDefault();
+        return firstNumber;
     } else {
         addToDisplay = number0.value;
         display.textContent = display.textContent.concat(addToDisplay);
@@ -43,12 +44,12 @@ number0.addEventListener('click', (e) => {
         console.log(firstNumber.length);
         return firstNumber;
     }
-
 });
 
 number1.addEventListener('click', (e) => {
     if (firstNumber.length >= 8) {
         e.preventDefault();
+        return firstNumber;
     } else {
         addToDisplay = number1.value;
         display.textContent = display.textContent.concat(addToDisplay);
@@ -61,6 +62,7 @@ number1.addEventListener('click', (e) => {
 number2.addEventListener('click', (e) => {
     if (firstNumber.length >= 8) {
         e.preventDefault();
+        return firstNumber;
     } else {
         addToDisplay = number2.value;
         display.textContent = display.textContent.concat(addToDisplay);
@@ -73,124 +75,115 @@ number2.addEventListener('click', (e) => {
 number3.addEventListener('click', (e) => {
     if (firstNumber.length >= 8) {
         e.preventDefault();
+        return firstNumber;
     } else {
         addToDisplay = number3.value;
         display.textContent = display.textContent.concat(addToDisplay);
         firstNumber = display.textContent;
         console.log(firstNumber.length);
         return firstNumber;
-    };
+    }
+});
 
-    number4.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number4.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
-    });
+number4.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number4.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    number5.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number5.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
-    });
+number5.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number5.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    number6.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number6.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
+number6.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number6.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    });
+number7.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number7.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    number7.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number7.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
-    });
+number8.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number8.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    number8.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number8.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
-    });
+number9.addEventListener('click', (e) => {
+    if (firstNumber.length >= 8) {
+        e.preventDefault();
+        return firstNumber;
+    } else {
+        addToDisplay = number9.value;
+        display.textContent = display.textContent.concat(addToDisplay);
+        firstNumber = display.textContent;
+        console.log(firstNumber.length);
+        return firstNumber;
+    }
+});
 
-    number9.addEventListener('click', (e) => {
-        if (firstNumber.length >= 8) {
-            e.preventDefault();
-        } else {
-            addToDisplay = number9.value;
-            display.textContent = display.textContent.concat(addToDisplay);
-            firstNumber = display.textContent;
-            console.log(firstNumber.length);
-            return firstNumber;
-        }
-    });
+// number sign changer (Positive or Negative)
+signChanger.addEventListener('click', () => {
+    if (firstNumber > 0) {
+        firstNumber = firstNumber * -1;
+        display.textContent = firstNumber;
+        console.log(firstNumber);
+        return firstNumber;
+    } else {
+        firstNumber = Math.abs(firstNumber);
+        display.textContent = firstNumber;
+        console.log(firstNumber);
+        return firstNumber;
+    }
+});
 
+// Turn number into percentage
+quotient.addEventListener("click", () => {
+    firstNumber = firstNumber / 100;
+    display.textContent = firstNumber;
+    console.log(firstNumber);
+    return firstNumber;
+});
 
-    // On -/+ click, add or remove sign infront
-    signChanger.addEventListener('click', () => {
-        firstNumber = parseInt(firstNumber);
-
-        if (firstNumber > 0) {
-            firstNumber = firstNumber * -1;
-            display.textContent = firstNumber;
-            return display.textContent;
-
-        } else {
-
-            if (firstNumber < 0) {
-                firstNumber = Math.abs(firstNumber);
-                display.textContent = firstNumber;
-                return display.textContent;
-            }
-        }
-    });
-
-    // Convert display to percentage
-    quotient.addEventListener("click", () => {
-        display.textContent = display.textContent / 100;
-    });
-
-    // Division
-    division.addEventListener("click", () => {
-        // numbers.push(firstNumber);
-        // numbers.push("/");
-        // firstNumber = 0;
-        // console.log(numbers);
-
-        display.textContent = firstNumber.concat("/");
-        // numbers.push(firstNumber);
-        // console.log(numbers);
-        // return firstNumber;
-    });
-
-
-
+// Add ability to turn number into DECIMAL NUMBER 

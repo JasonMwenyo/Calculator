@@ -20,7 +20,7 @@ mobile device to better understand basic functionality and edge cases. <br><br>
 - [x] User can see an entry pad containing buttons for the digits 0-9,
       operations - '+', '-', '/', and '=', a 'AC'
       button (for clear all).
-- [ ] User can enter numbers as sequences up to 8 digits long by clicking on
+- [x] User can enter numbers as sequences up to 8 digits long by clicking on
       digits in the entry pad. Entry of any digits more than 8 will be ignored.
 - [ ] User can click on an operation button to display the result of that
       operation on:
@@ -36,7 +36,7 @@ mobile device to better understand basic functionality and edge cases. <br><br>
 
 ## Developer Stories
 
-- [ ] User can click the 'AC' button to clear all internal work areas and
+- [x] User can click the 'AC' button to clear all internal work areas and
       to set the display to 0.
 - [ ] User can see 'ERR' displayed if any operation would exceed the
       8 digit maximum. <br><br>
