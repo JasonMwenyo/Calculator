@@ -9,7 +9,8 @@ let secondNumber = 0;
 let result = 0;
 let operator = null;
 
-let division = document.querySelector("#division");
+const division = document.querySelector("#division");
+const decimalNumber = document.querySelector("#decimal");
 const number0 = document.querySelector("#number0");
 const number1 = document.querySelector("#number1");
 const number2 = document.querySelector("#number2");
@@ -34,133 +35,83 @@ ac.addEventListener('click', () => {
 
 // On number click, show number and append to display
 number0.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number0.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number0.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number1.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number1.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number1.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number2.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number2.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number2.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number3.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number3.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number3.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number4.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number4.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number4.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number5.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number5.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number5.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number6.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number6.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number6.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number7.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number7.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number7.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number8.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number8.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number8.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 number9.addEventListener('click', (e) => {
-    if (firstNumber.length >= 8) {
-        e.preventDefault();
-        return firstNumber;
-    } else {
-        addToDisplay = number9.value;
-        display.textContent = display.textContent.concat(addToDisplay);
-        firstNumber = display.textContent;
-        console.log(firstNumber.length);
-        return firstNumber;
-    }
+    addToDisplay = number9.value;
+    display.textContent = display.textContent.concat(addToDisplay);
+    firstNumber = display.textContent;
+    // console.log(firstNumber.length);
+    return firstNumber;
 });
 
 // number sign changer (Positive or Negative)
@@ -186,4 +137,18 @@ quotient.addEventListener("click", () => {
     return firstNumber;
 });
 
+
+
 // Add ability to turn number into DECIMAL NUMBER 
+decimalNumber.addEventListener("click", (e) => {
+    const pattern = /^\d{1,}\.\d{1,}$/i;
+    if (pattern.test(firstNumber)) {
+        // If number has decimal place, then ignore when user presses "."
+    } else {
+        firstNumber = firstNumber.concat(".");
+        display.textContent = firstNumber;
+        console.log(firstNumber);
+    }
+})
+
+// check if number is a decimal 
