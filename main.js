@@ -9,6 +9,7 @@ let secondNumber = 0;
 let result = 0;
 let operator = null;
 
+
 const division = document.querySelector("#division");
 const decimalNumber = document.querySelector("#decimal");
 const number0 = document.querySelector("#number0");
