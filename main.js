@@ -7,16 +7,16 @@ class Calculator {
     }
 
     chooseOperator(operation) {
-        if (this.operation === '') {
-            this.operation = operation;
-            this.previousOperand = this.currentOperand;
-            this.currentOperand = ''
-            console.log(this.previousOperand)
-            // console.log(this.operation)
-        } else {
-            this.currentOperand = '';
-            display.textContent = '';
-        }
+        // if (this.operation === '') {
+        //     this.operation = operation;
+        //     this.previousOperand = this.currentOperand;
+        //     // this.currentOperand = '';
+        //     console.log(this.previousOperand)
+        //     // console.log(this.operation)
+        // } else {
+        //     this.currentOperand = '';
+        //     display.textContent = '';
+        // }
     }
 
     appendNumber(number) {
@@ -47,14 +47,15 @@ const calculator = new Calculator();
 
 numbers.forEach((button) => {
     button.addEventListener("click", () => {
-        calculator.appendNumber(button.textContent);
+        // console.log("Hi");
+        calculator.appendNumber(button.value);
         calculator.addToDisplay();
     })
 })
 
-operators.forEach((operate) => {
-    operate.addEventListener("click", () => {
-        calculator.chooseOperator(operate.textContent)
-        // operate.chooseOperator(operate);
-    })
-})
+// operators.forEach((operate) => {
+//     operate.addEventListener("click", () => {
+//         calculator.chooseOperator(operate.textContent)
+//         // operate.chooseOperator(operate);
+//     })
+// })
