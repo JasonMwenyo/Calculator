@@ -6,19 +6,6 @@ class Calculator {
         this.clear();
     }
 
-    chooseOperator(operation) {
-        // if (this.operation === '') {
-        //     this.operation = operation;
-        //     this.previousOperand = this.currentOperand;
-        //     // this.currentOperand = '';
-        //     console.log(this.previousOperand)
-        //     // console.log(this.operation)
-        // } else {
-        //     this.currentOperand = '';
-        //     display.textContent = '';
-        // }
-    }
-
     appendNumber(number) {
         if (number === "." && this.currentOperand.includes("."))
             return
@@ -29,10 +16,26 @@ class Calculator {
         display.textContent = this.currentOperand;
     }
 
+    signChanger() {
+        if (Math.sign(this.currentOperand >= 1)) {
+            this.currentOperand = this.currentOperand * -1;
+            // display.textContent = this.currentOperand;
+            calculator.addToDisplay();
+        } else {
+            if (Math.sign(this.currentOperand <= -1)) {
+                this.currentOperand = Math.abs(this.currentOperand);
+                // console.log(this.currentOperand);
+                calculator.addToDisplay();
+            }
+        }
+    }
+
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = '';
+        display.textContent = '';
+
     }
 }
 
@@ -47,10 +50,17 @@ const calculator = new Calculator();
 
 numbers.forEach((button) => {
     button.addEventListener("click", () => {
-        // console.log("Hi");
         calculator.appendNumber(button.value);
         calculator.addToDisplay();
     })
+})
+
+ac.addEventListener("click", () => {
+    calculator.clear();
+})
+
+signChanger.addEventListener("click", () => {
+    calculator.signChanger();
 })
 
 // operators.forEach((operate) => {
