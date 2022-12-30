@@ -17,34 +17,34 @@ class Calculator {
     }
 
     signChanger() {
-        if (Math.sign(this.currentOperand >= 1)) {
+        if (this.currentOperand > 0) {
+            // Convert negative current operand to negative
             this.currentOperand = this.currentOperand * -1;
-            // display.textContent = this.currentOperand;
-            calculator.addToDisplay();
         } else {
-            if (Math.sign(this.currentOperand <= -1)) {
-                this.currentOperand = Math.abs(this.currentOperand);
-                // console.log(this.currentOperand);
-                calculator.addToDisplay();
-            }
+            // Convert negative current operand to positive
+            this.currentOperand = Math.abs(this.currentOperand);
         }
+    }
+
+    changeToDecimal() {
+        this.currentOperand = this.currentOperand / 100;
+        calculator.addToDisplay();
     }
 
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = '';
-        display.textContent = '';
-
     }
 }
 
-let display = document.querySelector(".display");
+const display = document.querySelector(".display");
 const ac = document.querySelector("#allClear");
-let signChanger = document.querySelector("#signChanger");
-let quotient = document.querySelector("#quotient");
+const signChanger = document.querySelector("#signChanger");
+const quotient = document.querySelector("#quotient");
 const operators = document.querySelectorAll("#operator");
 const numbers = document.querySelectorAll("#number");
+const diving = document.querySelectorAll("#number");
 
 const calculator = new Calculator();
 
@@ -57,11 +57,22 @@ numbers.forEach((button) => {
 
 ac.addEventListener("click", () => {
     calculator.clear();
+    calculator.addToDisplay();
 })
 
 signChanger.addEventListener("click", () => {
     calculator.signChanger();
+    calculator.addToDisplay();
 })
+
+quotient.addEventListener("click", () => {
+    calculator.changeToDecimal();
+    calculator.addToDisplay();
+})
+
+
+
+
 
 // operators.forEach((operate) => {
 //     operate.addEventListener("click", () => {
@@ -69,3 +80,10 @@ signChanger.addEventListener("click", () => {
 //         // operate.chooseOperator(operate);
 //     })
 // })
+
+
+
+
+
+
+// Add ability to change number to decimal
