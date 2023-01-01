@@ -7,7 +7,7 @@ class Calculator {
     }
 
     appendNumber(number) {
-        if (number === "." && this.currentOperand.includes("."))
+        if (number === '.' && this.currentOperand.includes('.'))
             return
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
@@ -44,7 +44,7 @@ const signChanger = document.querySelector("#signChanger");
 const quotient = document.querySelector("#quotient");
 const operators = document.querySelectorAll("#operator");
 const numbers = document.querySelectorAll("#number");
-const diving = document.querySelectorAll("#number");
+const decimal = document.querySelector("#decimal");
 
 const calculator = new Calculator();
 
@@ -71,7 +71,10 @@ quotient.addEventListener("click", () => {
 })
 
 
-
+// decimal.addEventListener("click", () => {
+//     calculator.decimalPoint();
+//     calculator.addToDisplay();
+// })
 
 
 // operators.forEach((operate) => {
