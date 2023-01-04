@@ -31,6 +31,42 @@ class Calculator {
         calculator.addToDisplay();
     }
 
+    operator(operatorValue) {
+        this.operation = operatorValue;
+        this.previousOperand = this.currentOperand;
+        this.previousOperand = parseFloat(this.previousOperand);
+        this.currentOperand = '';
+    }
+
+    compute() {
+        let computation;
+        let prev = this.previousOperand;
+        let current = this.currentOperand;
+
+        current = parseFloat(current);
+
+        if (isNaN(prev) || isNaN(current)) return
+        switch (this.operation) {
+            case "/":
+                computation = prev / current;
+                break;
+            case "x":
+                computation = prev * current;
+                break;
+            case "-":
+                computation = prev - current;
+                break;
+            case "+":
+                computation = prev - current;
+                break;
+            default:
+                break;
+        }
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = "";
+    }
+
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
@@ -45,6 +81,7 @@ const quotient = document.querySelector("#quotient");
 const operators = document.querySelectorAll("#operator");
 const numbers = document.querySelectorAll("#number");
 const decimal = document.querySelector("#decimal");
+const equal = document.querySelector("#compute");
 
 const calculator = new Calculator();
 
@@ -70,23 +107,14 @@ quotient.addEventListener("click", () => {
     calculator.addToDisplay();
 })
 
+operators.forEach((operate) => {
+    operate.addEventListener("click", () => {
+        calculator.operator(operate.value);
+        calculator.addToDisplay();
+    })
+})
 
-// decimal.addEventListener("click", () => {
-//     calculator.decimalPoint();
-//     calculator.addToDisplay();
-// })
-
-
-// operators.forEach((operate) => {
-//     operate.addEventListener("click", () => {
-//         calculator.chooseOperator(operate.textContent)
-//         // operate.chooseOperator(operate);
-//     })
-// })
-
-
-
-
-
-
-// Add ability to change number to decimal
+equal.addEventListener("click", () => {
+    calculator.compute();
+    calculator.addToDisplay();
+})
